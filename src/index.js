@@ -11,6 +11,17 @@ for (let i = 1; i<11; i++) {
 
     let dot = document.createElement('div')
     dot.classList.add('dot')
+    dot.id = `dot-${i}`
+    dot.addEventListener('click', () => {
+        while (display.firstChild) {
+            display.removeChild(display.firstChild)
+        }
+        let catDiv = document.createElement('div')
+        catDiv.style.backgroundImage = `url(./media/images/${images[i-1]}.jpg)`
+        display.appendChild(catDiv)
+        selectDot(i)
+        timer.reset(5000)
+    })
     document.getElementById('dots').append(dot)
 }
 

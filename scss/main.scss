@@ -27,6 +27,12 @@ html, body, #root {
                 background: #ccc;
             }
         }
+        #left-arrow {
+            border-radius: 4px 0px 0px 4px;
+        }
+        #right-arrow {
+            border-radius: 0px 4px 4px 0px;
+        }
 
         #display {
             display: flex;
@@ -47,10 +53,10 @@ html, body, #root {
         
         .dot {
             background-color: #CCC;
-            width: 5px;
-            height: 5px;
+            width: 8px;
+            height: 8px;
             margin: 3px;
-            border-radius: 3px;
+            border-radius: 4px;
         }
     }
 }
