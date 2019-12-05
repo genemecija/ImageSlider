@@ -1,0 +1,87 @@
+@import "./resets";
+
+html, body, #root {
+    height: 100%;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    #carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // flex-direction: row;
+        width: 100%;
+
+        #left-arrow, #right-arrow {
+            padding: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                background: #ccc;
+            }
+        }
+
+        #display {
+            display: flex;
+            align-items: center;
+            
+            div {
+                width: 240px;
+                height: 240px;
+                background-repeat: no-repeat;
+                min-width: 240px;
+            }
+        }
+    }
+    #dots {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        
+        .dot {
+            background-color: #CCC;
+            width: 5px;
+            height: 5px;
+            margin: 3px;
+            border-radius: 3px;
+        }
+    }
+}
+
+.selectedDot {
+    background-color: #666 !important;
+}
+.fadeIn {
+    animation-name: fadeIn;
+}
+.fadeOut {
+    animation-name: fadeOut;
+}
+.fadeIn, .fadeOut {
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
