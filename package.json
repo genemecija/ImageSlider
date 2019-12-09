@@ -20,5 +20,8 @@
   "devDependencies": {
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "terser-webpack-plugin": "^1.4.2"
   }
 }
